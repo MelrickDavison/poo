@@ -1,3 +1,4 @@
+//Objetos da classe alunos
 let aluno0 = new Aluno("Fabricio", 16, 2022304467);
 let aluno1 = new Aluno("Gabriel", 17, 91238761276);
 let aluno2 = new Aluno ("Melrick", 16, 2022304388);
