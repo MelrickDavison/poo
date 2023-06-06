@@ -1,5 +1,5 @@
-class Celular{
-    constructor(id, tipo, marca, modelo, ram, armazenamento, processador, qtdDeCameras, foto){
+class Celular {
+    constructor(id, tipo, marca, modelo, ram, armazenamento, processador, qtdDeCameras, foto) {
         this.marca = marca;
         this.modelo = modelo;
         this.ram = ram;
@@ -10,7 +10,7 @@ class Celular{
         this.id = id;
         this.tipo = tipo;
     }
-    
+
 
 }
 
@@ -21,8 +21,8 @@ class Celular{
 // Faça um for percorrer esse array e imprimir cada objeto
 // no arquivo html.
 
-class Tv{
-    constructor(id, tipo, marca, modelo, tamanho, foto){
+class Tv {
+    constructor(id, tipo, marca, modelo, tamanho, foto) {
         this.marca = marca;
         this.modelo = modelo;
         this.tamanho = tamanho;
@@ -32,32 +32,88 @@ class Tv{
     }
 }
 
-// A classe Favoritos terá apenas 1 atributo:
-// listaDeProdutos
-// 
-// O construtor dessa classe não vai 
-// receber nada como entrada e apenas vai inicializar o
-// atributo com um array vazio.
-class Favoritos{
-    constructor(){
+
+class Produtos {
+    constructor() {
         this.listaDeProdutos = [];
+        this.listadeFavoritos = [];
     }
 
-    adicionarProduto(produto){
+    adicionarProduto(produto) {
         this.listaDeProdutos.push(produto);
     }
 
-    exibirNoHTML(){
+    adicionarFavorito(produto) {
+        this.listadeFavoritos.push(produto);
+        document.getElementsByClassName("btFavoritar").innerHTML = (`
+        <button class='btFavoritar' onclick="${this.removerProduto('this.listadeProdutos[i].id')}"> 🖤 </button>
+        `)
+    }
+
+    exibirNoHTML() {
+        //Deixando vazio o conteúdo da tag com id 'produtos'
+        document.getElementById('produtos').innerHTML = '';
+
+        for (let i = 0; i < this.listadeFavoritos.length; i++) {
+
+            if (this.listadeFavoritos[i].tipo == "tv") {
+                document.getElementById('produtos').innerHTML += (` 
+            
+            <div class='card'>
+            <button class='btRemover' onclick="${this.removerProduto(this.listadeFavoritos[i].id)}"> ❌  </button>
+                <img class='foto' src='img/${this.listadeFavoritos[i].foto}' />
+                <div class='info'>
+                    <h3 class='modelo'>${this.listadeFavoritos[i].modelo}</h3>
+                    <p class='marca'>${this.listadeFavoritos[i].marca}</p>
+                    
+                    <span class='outros'>${this.listadeFavoritos[i].tamanho}</span>
+                    <span class='outros'> polegadas</span>
+                </div> 
+               
+            </div>
+           
+        `);
+
+            }
+            else {
+
+                document.getElementById('produtos').innerHTML += (`
+           
+            <div class='card'> 
+            <button class='btRemover' onclick="${this.removerProduto(this.listadeFavoritos[i].id)}"> ❌  </button>
+                <img class='foto' src='img/${this.listadeFavoritos[i].foto}' />
+                <div class='info'>
+                    <h3 class='modelo'>${this.listadeFavoritos[i].modelo}</h3>
+                    <p class='marca'>${this.listadeFavoritos[i].marca}</p>
+                    
+                    <span class='outros'>${this.listadeFavoritos[i].processador}</span>
+                    <span class='separador'>|</span>
+                    <span class='outros'>${this.listadeFavoritos[i].armazenamento}</span>
+                    <span class='separador'>|</span>
+                    <span class='outros'>${this.listadeFavoritos[i].ram}</span>
+                    <span class='separador'>|</span>
+                    <span class='outros'>${this.listadeFavoritos[i].qtdDeCameras}</span>
+                    <span class='outros'>câmeras</span>
+                </div>
+                
+            </div>
+        `);
+            }
+        }
+
+
+    }
+
+    exibirTodosNoHTML() {
         //Deixando vazio o conteúdo da tag com id 'produtos'
         document.getElementById('produtos').innerHTML = '';
 
         for (let i = 0; i < this.listaDeProdutos.length; i++) {
 
-            if(this.listaDeProdutos[i].tipo == "tv"){
-            document.getElementById('produtos').innerHTML += (` 
+            if (this.listaDeProdutos[i].tipo == "tv") {
+                document.getElementById('produtos').innerHTML += (` 
             
             <div class='card'>
-            <button class='btRemover' onclick="${this.removerProduto("this.listaDeProdutos[i].id")}"> ❌  </button>
                 <img class='foto' src='img/${this.listaDeProdutos[i].foto}' />
                 <div class='info'>
                     <h3 class='modelo'>${this.listaDeProdutos[i].modelo}</h3>
@@ -66,18 +122,17 @@ class Favoritos{
                     <span class='outros'>${this.listaDeProdutos[i].tamanho}</span>
                     <span class='outros'> polegadas</span>
                 </div> 
-               
+                <button class='btFavoritar' onclick="${this.adicionarFavorito(this.listadeProdutos[i].id)}"> ♡ </button>
             </div>
            
         `);
-            
-        }
-        else{
-            
-            document.getElementById('produtos').innerHTML += (`
+
+            }
+            else {
+
+                document.getElementById('produtos').innerHTML += (`
            
             <div class='card'> 
-            <button class='btRemover' onclick="${this.removerProduto("this.listaDeProdutos[i].id")}"> ❌  </button>
                 <img class='foto' src='img/${this.listaDeProdutos[i].foto}' />
                 <div class='info'>
                     <h3 class='modelo'>${this.listaDeProdutos[i].modelo}</h3>
@@ -92,18 +147,18 @@ class Favoritos{
                     <span class='outros'>${this.listaDeProdutos[i].qtdDeCameras}</span>
                     <span class='outros'>câmeras</span>
                 </div>
-                
+                <button class='btFavoritar' onclick="${this.adicionarFavorito(this.listadeProdutos[i].id)}"> ♡ </button>
             </div>
         `);
+            }
         }
-    }
 
 
     }
 
-    removerProduto(id){
-        for(let i = 0; i < this.listaDeProdutos.length; i++){
-            if(this.listaDeProdutos[i].id == id){
+    removerProduto(id) {
+        for (let i = 0; i < this.listaDeProdutos.length; i++) {
+            if (this.listaDeProdutos[i].id == id) {
                 this.listaDeProdutos.splice(i, 1)
             }
         }
