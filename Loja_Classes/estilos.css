@@ -1,9 +1,16 @@
-.container-cards{
+.container-cards {
+    background-repeat: no-repeat;
     display: flex;
+    flex-direction: column;
     gap: 12px;
+    width: 220pt;
+    height: 200px;
 }
 
-.card{
+.card {
+    text-align: center;
+    align-items: center;
+    align-content: center;
     border-radius: 16px;
     border: 1px solid #dddddd;
     padding: 20px;
@@ -15,42 +22,81 @@
     gap: 12px;
 }
 
-.foto{
+.foto {
     width: 220px;
     height: 280px;
     object-fit: cover;
 }
 
 
-.info{
+.info {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
+
 }
 
-.info .modelo{
+.info .modelo {
     font-size: 16pt;
     color: #333333;
 }
-.info .marca{
+
+.info .marca {
     font-size: 12pt;
     color: #777777;
 }
-.info .outros{
+
+.info .outros {
     font-size: 12pt;
 }
-.info .separador{
+
+.info .separador {
     color: #aaaaaa;
     padding: 10px;
 }
-.btRemover{
-    
-    font-size: 16pt;
+
+.btRemover {
+
+    font-size: 10pt;
     font-weight: bold;
     align-items: center;
     align-content: center;
     width: fit-content;
-    padding: 8px 24px;
-    background-color: #fafafa;
+    /* padding: 8px 24px; */
+    background-color: white;
     color: #666699;
     border: none;
+    /* margin-top: 15px; */
+    margin-left: 230px;
+    /* margin-right: 15px; */
+}
+
+.btRemover:hover {
+    transform: scale(1.2);
+    background-position: -60px;
+    /* box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); */
+}
+
+.btFavoritar {
+
+    font-size: 15pt;
+    font-weight: bold;
+    align-items: center;
+    align-content: center;
+    width: fit-content;
+    /* padding: 8px 24px; */
+    background-color: white;
+    color: #666699;
+    border: none;
+    /* margin-top: 15px; */
+    margin-left: 230px;
+    /* margin-right: 15px; */
+}
+
+.btFavoritar:hover {
+    transform: scale(1.2);
+    background-position: -60px;
+    /* box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); */
+}
+
+.btFavoritar.btFavoritar:click {
+    background-color: red;
 }
