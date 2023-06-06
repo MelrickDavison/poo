@@ -54,8 +54,10 @@ class Favoritos{
         for (let i = 0; i < this.listaDeProdutos.length; i++) {
 
             if(this.listaDeProdutos[i].tipo == "tv"){
-            document.getElementById('produtos').innerHTML += (`
+            document.getElementById('produtos').innerHTML += (` 
+            
             <div class='card'>
+            <button class='btRemover' onclick="${this.removerProduto("this.listaDeProdutos[i].id")}"> ❌  </button>
                 <img class='foto' src='img/${this.listaDeProdutos[i].foto}' />
                 <div class='info'>
                     <h3 class='modelo'>${this.listaDeProdutos[i].modelo}</h3>
@@ -64,7 +66,7 @@ class Favoritos{
                     <span class='outros'>${this.listaDeProdutos[i].tamanho}</span>
                     <span class='outros'> polegadas</span>
                 </div> 
-                <button class='btRemover' onclick="${this.removerProduto("this.listaDeProdutos[i].id")}"> ❌  </button>
+               
             </div>
            
         `);
@@ -73,7 +75,9 @@ class Favoritos{
         else{
             
             document.getElementById('produtos').innerHTML += (`
-            <div class='card'>
+           
+            <div class='card'> 
+            <button class='btRemover' onclick="${this.removerProduto("this.listaDeProdutos[i].id")}"> ❌  </button>
                 <img class='foto' src='img/${this.listaDeProdutos[i].foto}' />
                 <div class='info'>
                     <h3 class='modelo'>${this.listaDeProdutos[i].modelo}</h3>
@@ -88,7 +92,7 @@ class Favoritos{
                     <span class='outros'>${this.listaDeProdutos[i].qtdDeCameras}</span>
                     <span class='outros'>câmeras</span>
                 </div>
-                <button class='btRemover' onclick="${this.removerProduto("this.listaDeProdutos[i].id")}"> ❌  </button>
+                
             </div>
         `);
         }
