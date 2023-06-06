@@ -1,5 +1,5 @@
 class Celular{
-    constructor(marca, modelo, ram, armazenamento, processador, qtdDeCameras, foto){
+    constructor(id, tipo, marca, modelo, ram, armazenamento, processador, qtdDeCameras, foto){
         this.marca = marca;
         this.modelo = modelo;
         this.ram = ram;
@@ -7,7 +7,10 @@ class Celular{
         this.processador = processador;
         this.qtdDeCameras = qtdDeCameras;
         this.foto = foto;
+        this.id = id;
+        this.tipo = tipo;
     }
+    
 
 }
 
@@ -19,11 +22,13 @@ class Celular{
 // no arquivo html.
 
 class Tv{
-    constructor(marca, modelo, tamanho, foto){
+    constructor(id, tipo, marca, modelo, tamanho, foto){
         this.marca = marca;
         this.modelo = modelo;
         this.tamanho = tamanho;
         this.foto = foto;
+        this.id = id
+        this.tipo = tipo;
     }
 }
 
@@ -48,6 +53,7 @@ class Favoritos{
 
         for (let i = 0; i < this.listaDeProdutos.length; i++) {
 
+            if(this.listaDeProdutos[i].tipo == "tv"){
             document.getElementById('produtos').innerHTML += (`
             <div class='card'>
                 <img class='foto' src='img/${this.listaDeProdutos[i].foto}' />
@@ -57,16 +63,43 @@ class Favoritos{
                     
                     <span class='outros'>${this.listaDeProdutos[i].tamanho}</span>
                     <span class='outros'> polegadas</span>
-                </div>
+                </div> 
+                <button class='btRemover' onclick="${this.removerProduto("this.listaDeProdutos[i].id")}"> ❌  </button>
             </div>
+           
         `);
             
         }
+        else{
+            
+            document.getElementById('produtos').innerHTML += (`
+            <div class='card'>
+                <img class='foto' src='img/${this.listaDeProdutos[i].foto}' />
+                <div class='info'>
+                    <h3 class='modelo'>${this.listaDeProdutos[i].modelo}</h3>
+                    <p class='marca'>${this.listaDeProdutos[i].marca}</p>
+                    
+                    <span class='outros'>${this.listaDeProdutos[i].processador}</span>
+                    <span class='separador'>|</span>
+                    <span class='outros'>${this.listaDeProdutos[i].armazenamento}</span>
+                    <span class='separador'>|</span>
+                    <span class='outros'>${this.listaDeProdutos[i].ram}</span>
+                    <span class='separador'>|</span>
+                    <span class='outros'>${this.listaDeProdutos[i].qtdDeCameras}</span>
+                    <span class='outros'>câmeras</span>
+                </div>
+                <button class='btRemover' onclick="${this.removerProduto("this.listaDeProdutos[i].id")}"> ❌  </button>
+            </div>
+        `);
+        }
     }
 
-    removerProduto(produto){
+
+    }
+
+    removerProduto(id){
         for(let i = 0; i < this.listaDeProdutos.length; i++){
-            if(this.listaDeProdutos[i] == produto){
+            if(this.listaDeProdutos[i].id == id){
                 this.listaDeProdutos.splice(i, 1)
             }
         }

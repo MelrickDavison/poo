@@ -42,3 +42,15 @@
     color: #aaaaaa;
     padding: 10px;
 }
+.btRemover{
+    font-size: 32pt;
+    font-weight: bold;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    width: fit-content;
+    padding: 8px 24px;
+    background-color: #fafafa;
+    color: #666699;
+    border: none;
+}
