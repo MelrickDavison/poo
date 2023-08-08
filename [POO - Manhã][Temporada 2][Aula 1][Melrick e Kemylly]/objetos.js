@@ -6,12 +6,15 @@ let listaDeAlunes = [];
 listaDeAlunes.push(alune1);
 listaDeAlunes.push(alune2);
 listaDeAlunes.push(alune3);
- 
+ document.getElementById("text").innerHTML = ""
 for (let i = 0; i < listaDeAlunes.length; i++) {
-    console.log(
-        `Nome: ${listaDeAlunes[i].nome} \n
-         Idade: ${listaDeAlunes[i].idade} \n       
-         Matricula: ${listaDeAlunes[i].matricula}
+
+    document.getElementById("text").innerHTML += (
+        `<div > 
+        <div> Nome: ${listaDeAlunes[i].nome} </div>
+         <div> Idade: ${listaDeAlunes[i].idade}   </div>
+         <div>Matricula: ${listaDeAlunes[i].matricula}</div>
+         </div>
     
     `);
     
