@@ -8,6 +8,11 @@ listaDeAlunes.push(alune2);
 listaDeAlunes.push(alune3);
  
 for (let i = 0; i < listaDeAlunes.length; i++) {
-    console.table(listaDeAlunes[i]);
+    console.log(
+        `Nome: ${listaDeAlunes[i].nome} \n
+         Idade: ${listaDeAlunes[i].idade} \n       
+         Matricula: ${listaDeAlunes[i].matricula}
+    
+    `);
     
 }
