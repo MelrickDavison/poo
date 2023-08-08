@@ -1,13 +1,13 @@
-let aluno1 = new Alunes("Fabricio", 16, 101);
-let aluno2 = new Alunes("Melrick", 16, 102);
-let aluno3 = new Alunes("Kemylly", 17, 103);
+let alune1 = new Alunes("Fabricio", 16, 101);
+let alune2 = new Alunes("Melrick", 16, 102);
+let alune3 = new Alunes("Kemylly", 17, 103);
 
-let listaDeAlunos = [];
-listaDeAlunos.push(aluno1);
-listaDeAlunos.push(aluno2);
-listaDeAlunos.push(aluno3);
+let listaDeAlunes = [];
+listaDeAlunes.push(alune1);
+listaDeAlunes.push(alune2);
+listaDeAlunes.push(alune3);
  
-for (let i = 0; i < listaDeAlunos.length; i++) {
-    console.log(listaDeAlunos[i]);
+for (let i = 0; i < listaDeAlunes.length; i++) {
+    console.log(listaDeAlunes[i]);
     
 }
