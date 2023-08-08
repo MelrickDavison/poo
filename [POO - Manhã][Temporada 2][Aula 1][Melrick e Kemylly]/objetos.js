@@ -8,6 +8,6 @@ listaDeAlunes.push(alune2);
 listaDeAlunes.push(alune3);
  
 for (let i = 0; i < listaDeAlunes.length; i++) {
-    console.log(listaDeAlunes[i]);
+    console.table(listaDeAlunes[i]);
     
 }
