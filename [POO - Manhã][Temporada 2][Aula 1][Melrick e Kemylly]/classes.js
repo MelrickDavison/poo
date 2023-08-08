@@ -1,4 +1,4 @@
-class Aluna{
+class Alunes{
     constructor(nome, idade, matricula){
         this.nome = nome;
         this.idade = idade;
