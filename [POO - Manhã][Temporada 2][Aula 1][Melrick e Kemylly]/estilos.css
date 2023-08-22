@@ -1,0 +1,25 @@
+.body{
+    background-color: #000000;
+}
+
+.cabecalho{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #373737;
+    
+
+}
+
+.cabecalho .turma{
+    color: #53c93b;
+    font-size: 20px;
+}
+.cabecalho .nome{
+    font-size: 32px;
+    color: #ffffff;
+}
+
+.cabecalho .logoifal{
+   height: 140px;
+}
