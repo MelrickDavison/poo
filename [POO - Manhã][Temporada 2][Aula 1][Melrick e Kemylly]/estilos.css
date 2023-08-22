@@ -23,3 +23,11 @@
 .cabecalho .logoifal{
    height: 140px;
 }
+
+.conteudo{
+    background-color: #eaeaea;
+}
+
+.conteudo .foto{
+    width: 120px;
+}
