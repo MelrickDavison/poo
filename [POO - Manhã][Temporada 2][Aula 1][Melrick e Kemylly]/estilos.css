@@ -2,22 +2,26 @@
     background-color: #000000;
 }
 
+.card{
+    width: 720px;
+}
+
 .cabecalho{
     display: flex;
     justify-content: space-between;
     padding: 20px;
     background-color: #373737;
-    
-
 }
 
 .cabecalho .turma{
-    color: #53c93b;
-    font-size: 20px;
+    color: #75d063;
+    font-size: 14px;
+    font-family: 'Roboto';
 }
 .cabecalho .nome{
-    font-size: 32px;
-    color: #ffffff;
+    font-size: 24px;
+    color: #eaeaea;
+    font-family: 'Roboto Slab', serif;
 }
 
 .cabecalho .logoifal{
@@ -26,8 +30,31 @@
 
 .conteudo{
     background-color: #eaeaea;
+    display: flex;
+    justify-content: space-around;
+    padding: 24px;
 }
 
+.conteudo .info{
+    width: 400px;
+
+}
 .conteudo .foto{
     width: 120px;
+    border: solid 1px black;
+}
+
+.info .label{
+    font-size: 14px;
+    font-family: 'Roboto';
+    color: #2c8088;
+    font-weight: 500;
+}
+
+.info .valor{
+    border-bottom: 1px solid#2c808855;
+    color: #1c4f53;
+  font-size: 20px;
+  font-weight: 700;
+    font-family: 'Roboto Slab', serif;
 }
