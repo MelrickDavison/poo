@@ -1,6 +1,6 @@
 let alune1 = new Alunes("912A", "Fabricio Arcanjo Guimarães Costa", 16, 101, 'https://lh3.googleusercontent.com/d/17jAtucgnXEUVT06_Rhm-n1xQazWmsuM5', 'fagc1@aluno.ifal.edu.br');
 let alune2 = new Alunes("912A","Melrick Davison Fonseca Ribeiro", 16, 102, 'https://lh3.googleusercontent.com/d/1XUZw8EtjRqL7ouVNORZIVGii2FJxxL_F ', "mdfr1@aluno.ifal.edu.br");
-let alune3 = new Alunes("912A","Kemylly Gabrielly Gomes Rodrigues", 17, 103, 'https://lh3.googleusercontent.com/d/1uWL4Z7JRW478UM_pObd4dGNp--USG5or');
+let alune3 = new Alunes("912A","Kemylly Gabrielly Gomes Rodrigues", 17, 103, 'https://lh3.googleusercontent.com/d/1uWL4Z7JRW478UM_pObd4dGNp--USG5or', "kggr1@aluno.ifal.edu.br");
 
 let listaDeAlunes = [];
 listaDeAlunes.push(alune1);
