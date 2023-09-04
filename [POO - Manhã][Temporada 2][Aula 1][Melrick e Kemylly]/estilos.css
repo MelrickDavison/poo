@@ -1,16 +1,23 @@
-.body{
+body{
     background-color: #000000;
 }
 
 .card{
     width: 720px;
+    margin-bottom: 20px;
+    margin-left: 60px;
 }
 
 .cabecalho{
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    background-color: #373737;
+    margin-left: -6px;
+
+    background-color: #303030;
+    z-index: 2;
+    position: relative;
+    box-shadow: 5px 4px 10px #333333 ;
 }
 
 .cabecalho .turma{
@@ -29,6 +36,7 @@
 }
 
 .conteudo{
+    z-index: 1;
     background-color: #eaeaea;
     display: flex;
     justify-content: space-around;
