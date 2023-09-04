@@ -1,11 +1,14 @@
 body{
+    display: flex;
     background-color: #000000;
+    align-items: center;
+    flex-direction: column;
 }
 
 .card{
     width: 720px;
     margin-bottom: 20px;
-    margin-left: 60px;
+    
     display: flex;
     flex-direction: column;
 }
@@ -49,7 +52,9 @@ body{
 
 }
 .conteudo .foto{
-    width: 120px;
+    width: 160px;
+    height: 200px;
+    object-fit: cover;
     border: solid 1px black;
 }
 
