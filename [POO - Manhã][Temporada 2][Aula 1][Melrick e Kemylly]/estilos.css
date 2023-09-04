@@ -6,6 +6,8 @@ body{
     width: 720px;
     margin-bottom: 20px;
     margin-left: 60px;
+    display: flex;
+    flex-direction: column;
 }
 
 .cabecalho{
@@ -16,8 +18,7 @@ body{
 
     background-color: #303030;
     z-index: 2;
-    position: relative;
-    box-shadow: 5px 4px 10px #333333 ;
+    box-shadow: 4px 16px 10px #10101066;/*Sombra (66 dá a trasparência)*/ 
 }
 
 .cabecalho .turma{
