@@ -12,8 +12,9 @@ class Alunes{
     }
 
     getIdade(){
-        return ;
 
+        let hoje = new Date();
+        return (hoje.getFullYear() - this.dataDeNascimento.getFullYear())
     }
 
     getNome(){
