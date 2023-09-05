@@ -5,14 +5,27 @@ body{
     flex-direction: column;
 }
 
+
 .card{
     width: 720px;
     margin-bottom: 20px;
-    
+
     display: flex;
     flex-direction: column;
+    transition: 1000ms ease-out;
 }
 
+.card:hover{
+    transform: scale(1.05);
+    transition: 800ms ease-out;
+    /* margin-top: 5%;
+    margin-bottom: 10%; */
+     
+}
+
+.card:hover .card:not(:hover){
+    opacity: 0.5;
+}
 .cabecalho{
     display: flex;
     justify-content: space-between;
