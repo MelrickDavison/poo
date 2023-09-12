@@ -13,17 +13,44 @@
 </head>
 
 <body>
-    <p id="text">
+    <form id="cadastroAluno" action="#">
+        <div id="containerDeCards"></div>
+        <div>
+            <label for=""></label>
+            Turma
+            <input type="text" id="iptTurma">
+        </div>
+        <div>
+            <label for=""></label>
+            Primeiro Nome
+            <input type="text" id="iptPrimeiroNome">
+        </div>
+        <div>
+            <label for=""></label>
+            Segundo Nome
+            <input type="text" id="iptSegundoNome">
+        </div>
+        <div>
+            <label for=""></label>
+            Data de nascimento
+            <input type="date" id="iptDataDeNascimento">
+        </div>
+        <div>
+            <label for=""></label>
+            Matrícula
+            <input type="text" id="iptMatricula">
+        </div>
 
-    </p>
-    <div><label for=""></label>Turma<input type="text"></div>
-    <div><label for=""></label>Primeiro Nome<input type="text"></div>
-    <div><label for=""></label>Segundo Nome<input type="text"></div>
-    <div><label for=""></label>Data de nascimento<input type="text"></div>
-    <div><label for=""></label>Matrícula<input type="text"></div>
-    <button>Submit</button>
+
+        <button id="btnCadastrar">
+            Cadastrar
+        </button>
+    </form>
+
     <script src="classes.js"></script>
     <script src="objetos.js"></script>
+    <script src="controlador.js"></script>
+    <script src="designer.js"></script>
 
 </body>
 

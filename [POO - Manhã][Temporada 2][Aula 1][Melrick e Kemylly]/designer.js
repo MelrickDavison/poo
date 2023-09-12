@@ -1,9 +1,11 @@
+function desenharcard(container) {
 
-document.getElementById("text").innerHTML = ""
-for (let i = 0; i < listaDeAlunes.length; i++) {
 
-    document.getElementById("text").innerHTML += (
-        `<div class='card'> 
+    container.innerHTML = ""
+    for (let i = 0; i < listaDeAlunes.length; i++) {
+
+        container.innerHTML +=
+            `<div class='card'> 
         <div class='cabecalho'>
             <div>
                 <p class='turma'>
@@ -38,6 +40,7 @@ for (let i = 0; i < listaDeAlunes.length; i++) {
 
          </div>
     
-    `);
+    `;
 
+    }
 }

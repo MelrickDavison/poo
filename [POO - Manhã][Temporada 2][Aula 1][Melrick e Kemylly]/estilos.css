@@ -1,12 +1,14 @@
-body{
+body {
     display: flex;
     background-color: #000000;
     align-items: center;
     flex-direction: column;
+    color: #eaeaea;
 }
 
+form {}
 
-.card{
+.card {
     width: 720px;
     margin-bottom: 20px;
 
@@ -15,18 +17,19 @@ body{
     transition: 1000ms ease-out;
 }
 
-.card:hover{
+.card:hover {
     transform: scale(1.05);
     transition: 800ms ease-out;
     /* margin-top: 5%;
     margin-bottom: 10%; */
-     
+
 }
 
-.card:hover .card:not(:hover){
+.card:hover .card:not(:hover) {
     opacity: 0.5;
 }
-.cabecalho{
+
+.cabecalho {
     display: flex;
     justify-content: space-between;
     padding: 20px;
@@ -34,25 +37,27 @@ body{
 
     background-color: #303030;
     z-index: 2;
-    box-shadow: 4px 16px 10px #10101066;/*Sombra (66 dá a trasparência)*/ 
+    box-shadow: 4px 16px 10px #10101066;
+    /*Sombra (66 dá a trasparência)*/
 }
 
-.cabecalho .turma{
+.cabecalho .turma {
     color: #75d063;
     font-size: 14px;
     font-family: 'Roboto';
 }
-.cabecalho .nome{
+
+.cabecalho .nome {
     font-size: 24px;
     color: #eaeaea;
     font-family: 'Roboto Slab', serif;
 }
 
-.cabecalho .logoifal{
-   height: 140px;
+.cabecalho .logoifal {
+    height: 140px;
 }
 
-.conteudo{
+.conteudo {
     z-index: 1;
     background-color: #eaeaea;
     display: flex;
@@ -60,28 +65,29 @@ body{
     padding: 24px;
 }
 
-.conteudo .info{
+.conteudo .info {
     width: 400px;
 
 }
-.conteudo .foto{
+
+.conteudo .foto {
     width: 160px;
     height: 200px;
     object-fit: cover;
     border: solid 1px black;
 }
 
-.info .label{
+.info .label {
     font-size: 14px;
     font-family: 'Roboto';
     color: #2c8088;
     font-weight: 500;
 }
 
-.info .valor{
+.info .valor {
     border-bottom: 1px solid#2c808855;
     color: #1c4f53;
-  font-size: 20px;
-  font-weight: 700;
+    font-size: 20px;
+    font-weight: 700;
     font-family: 'Roboto Slab', serif;
 }
