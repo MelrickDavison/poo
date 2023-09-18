@@ -17,7 +17,7 @@ function desenharcard(container) {
         </div>
 
         <div class='conteudo'>
-        <img class='foto' src='${listaDeAlunes[i].foto}'>
+        <img class='foto' src=''>
          <div class='info'>
               <div>
                  <p class='label'> Idade:</p>
@@ -26,10 +26,6 @@ function desenharcard(container) {
               <div>
                     <p class='label'> Matricula:</p>
                     <p class='valor's>  ${listaDeAlunes[i].matricula}  </p>
-                </div>
-                <div>
-                    <p class='label'> Email:  </p>
-                    <p class='valor'> ${listaDeAlunes[i].email} </p>
                 </div>
          </div>
         </div>
