@@ -19,7 +19,8 @@ function quandoClicarEmCadastrar() {
         inputDataDeNascimento.value,
         inputMatricula.value,
     );
-    desenharcard(containerDeCards);
     listaDeAlunes.push(alunoTemp);
-    console.log(listaDeAlunes);
+   
+    console.log(listaDeAlunes);     
+    desenharcard(containerDeCards);             
 }
