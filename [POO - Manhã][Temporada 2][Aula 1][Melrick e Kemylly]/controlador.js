@@ -1,4 +1,3 @@
-let inputTurma = document.getElementById('iptTurma');
 let inputPrimeiroNome = document.getElementById('iptPrimeiroNome');
 let inputSegundoNome = document.getElementById('iptSegundoNome');
 let inputDataDeNascimento = document.getElementById('iptDataDeNascimento');
@@ -25,7 +24,7 @@ function quandoClicarEmCadastrar() {
         inputDataDeNascimento.value,
         inputMatricula.value,
     );
-    
+
     turma.adicionarAlune(alunoTemp);     
     desenharcard(containerDeCards);             
 }
