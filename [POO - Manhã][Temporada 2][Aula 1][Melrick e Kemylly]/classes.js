@@ -21,3 +21,14 @@ class Alunes{
         return `${this.ultimoNome}, ${this.primeiroNome}`;
     }
 }
+
+
+class Turma{
+constructor(){
+    this.listaDeAlunes = [];
+    }
+    
+    adicionarAlune(alune){
+        this.listaDeAlunes.push(alune)
+    }
+}
