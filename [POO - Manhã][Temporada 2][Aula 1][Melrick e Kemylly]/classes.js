@@ -27,8 +27,8 @@ class Turma{
 constructor(){
     this.listaDeAlunes = [];
     }
-    
+
     adicionarAlune(alune){
-        this.listaDeAlunes.push(alune)
+        this.listaDeAlunes.push(alune);
     }
 }
