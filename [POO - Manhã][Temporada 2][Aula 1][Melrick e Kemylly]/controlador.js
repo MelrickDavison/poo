@@ -12,19 +12,18 @@ buttonCadastrar.addEventListener('click', quandoClicarEmCadastrar);
 //Fim dos Listeneres
 
 //Objetos:
-let turma = new Turma();
+let turma2ano = new Turma();
 
 //---------------------------------------------------------
 
 function quandoClicarEmCadastrar() {
     let alunoTemp = new Alunes(
-        inputTurma.value,
         inputPrimeiroNome.value,
         inputSegundoNome.value,
         inputDataDeNascimento.value,
         inputMatricula.value,
     );
 
-    turma.adicionarAlune(alunoTemp);     
+    turma2ano.adicionarAlune(alunoTemp);     
     desenharcard(containerDeCards);             
 }
