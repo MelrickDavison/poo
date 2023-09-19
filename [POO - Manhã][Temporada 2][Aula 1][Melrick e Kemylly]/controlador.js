@@ -12,6 +12,11 @@ let containerDeCards = document.getElementById('containerDeCards');
 buttonCadastrar.addEventListener('click', quandoClicarEmCadastrar);
 //Fim dos Listeneres
 
+//Objetos:
+let turma = new Turma();
+
+//---------------------------------------------------------
+
 function quandoClicarEmCadastrar() {
     let alunoTemp = new Alunes(
         inputTurma.value,
@@ -20,8 +25,7 @@ function quandoClicarEmCadastrar() {
         inputDataDeNascimento.value,
         inputMatricula.value,
     );
-    listaDeAlunes.push(alunoTemp);
-   
-    console.log(listaDeAlunes);     
+    
+    turma.adicionarAlune(alunoTemp);     
     desenharcard(containerDeCards);             
 }
