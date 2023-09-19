@@ -1,6 +1,5 @@
 class Alunes{
-    constructor(turma, primeiroNome, ultimoNome, dataDeNascimento, matricula, foto, email){
-        this.turma = turma;
+    constructor(primeiroNome, ultimoNome, dataDeNascimento, matricula, foto, email){
 
         this.primeiroNome = primeiroNome;
         this.ultimoNome = ultimoNome;

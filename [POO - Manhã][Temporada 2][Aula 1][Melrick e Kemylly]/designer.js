@@ -8,9 +8,6 @@ function desenharcard(container) {
             `<div class='card'> 
         <div class='cabecalho'>
             <div>
-                <p class='turma'>
-             Turma: ${listaDeAlunes[i].turma}
-             </p>
                 <h3 class='nome'>${listaDeAlunes[i].getNome()}</h3>
              </div>
             <img class='logoifal' src='img/ifal.png'>
