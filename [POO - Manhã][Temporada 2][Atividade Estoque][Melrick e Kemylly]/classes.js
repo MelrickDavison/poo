@@ -10,7 +10,7 @@ class Estoque {
         this.listaDeProdutos = [];
     }
 
-    adicionarProduto(produto) {
+      adicionarProduto(produto) {
         this.listaDeProdutos.push(produto);
     }
 }

@@ -3,24 +3,19 @@ function desenharCard(container) {
 
     for (let i = 0; i < estoque.listaDeProdutos.length; i++) {
         container.innerHTML += `
-            <div>
-                <p>
-                Descricao:
-                <p>
+            <div class='card'>
+                <p class='descricao'>
                     ${estoque.listaDeProdutos[i].descricao}
-                </p>
                 </p>
             </div>
             
 
-            <div>
-            <p>
-            Preço:
-            <p>
+            <div class='card'>
+                <p class='descricao'>
                 ${estoque.listaDeProdutos[i].precoUnitario}
-            </p>
-            </p>
-        </div>
+                </p>
+                </div>
+                
         `;
     }
 }
