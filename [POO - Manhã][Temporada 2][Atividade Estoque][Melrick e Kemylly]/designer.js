@@ -1,4 +1,4 @@
-function desenharCard(container) {
+function desenharCard(estoque, container) {
     container.innerHTML = "";
 
     for (let i = 0; i < estoque.listaDeProdutos.length; i++) {
