@@ -11,7 +11,7 @@ function desenharCard(estoque, container) {
             
 
             <div class='card'>
-                <p class='descricao'>
+                <p class='preco'>
                 ${estoque.listaDeProdutos[i].precoUnitario}
                 </p>
                 </div>
