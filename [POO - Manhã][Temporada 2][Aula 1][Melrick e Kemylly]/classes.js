@@ -16,7 +16,7 @@ class Alunes{
         return (hoje.getFullYear() - this.dataDeNascimento.getFullYear())
     }
 
-    getNome(){
+     getNome(){
         return `${this.ultimoNome}, ${this.primeiroNome}`;
     }
 }

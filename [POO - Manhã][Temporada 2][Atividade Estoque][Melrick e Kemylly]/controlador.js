@@ -11,5 +11,5 @@ function quandoClicarNoBotaoCadastrar() {
     estoque.adicionarProduto(produtoTemp);
 
 
-    desenharCard(containerCards);
+    desenharCard(estoque, containerCards);
 }
