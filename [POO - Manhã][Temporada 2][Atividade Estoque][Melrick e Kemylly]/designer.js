@@ -5,16 +5,17 @@ function desenharCard(estoque, container) {
         container.innerHTML += `
             <div class='card'>
                 <p class='descricao'>
+                Descrição Produto:
                     ${estoque.listaDeProdutos[i].descricao}
                 </p>
             </div>
 
             <div class='card'>
                 <p class='preco'>
-                ${estoque.listaDeProdutos[i].precoUnitario}
+                Preço:
+                R$ ${estoque.listaDeProdutos[i].precoUnitario}
                 </p>
-                </div>
-                
+                </div> 
         `;
     }
 }

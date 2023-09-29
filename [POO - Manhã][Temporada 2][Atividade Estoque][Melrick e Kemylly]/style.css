@@ -1,19 +1,20 @@
-body{
+body {
     text-align: center;
     align-items: center;
     color: white;
     background-color: black;
 }
 
-form{
+form {
     text-align: center;
 }
 
-.preco{
+.preco {
     font-size: 15px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.descricao{
+
+.descricao {
     font-size: 30px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
