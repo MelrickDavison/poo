@@ -47,7 +47,7 @@ class EstoqueDeVeiculos{
         if(veiculo instanceof Veiculo && !(veiculo instanceof Jetski)){
             this.listaDeVeiculos.push(veiculo)
         } else{
-            console.error("Só é permitido Veiculos terreste")
+            console.error("Só é permitido Veiculos terrestre")
         }
     }
 }
