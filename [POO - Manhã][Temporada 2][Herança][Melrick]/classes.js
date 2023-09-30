@@ -10,8 +10,8 @@ class Participante {
 //Herança tem que ter EXTENDS and SUPER()
 
 //Extends indica quem é a classe mãe
-class Alune extends Participante {
-    constructor(nome, cpf, dataDeNascimento, matricula) {
+class Aluno extends Participante {
+    constructor(nome, cpf, dataDeNascimento, matricula,) {
         //Super chama o construtor da classe-mãe (Participante)
         super(nome, cpf, dataDeNascimento);
         this.matricula = matricula;
@@ -32,6 +32,11 @@ class EventoAcademico {
     }
 
     cadastrarParticipante(participante) {
+        //instanceof verifica a classe do objeto
+        if(participante instanceof Participante){
         this.listaDeParticipantes.push(participante);
+        } else {
+            console.error('Só é permitido cadastrar Participantes')
+        }
     }
 }
