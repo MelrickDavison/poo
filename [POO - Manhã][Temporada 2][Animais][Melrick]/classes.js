@@ -23,3 +23,14 @@ class Gato extends Animal{
     }
 }
 
+class Siames extends Gato{
+    constructor(nome, cor="Cinza"){
+        super(nome)
+        this.cor = cor;
+    }
+
+    emitiSom(){
+        console.log('MIAU CARALHO');
+    }
+}
+
