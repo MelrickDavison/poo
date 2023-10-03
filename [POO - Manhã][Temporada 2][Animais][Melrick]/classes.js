@@ -25,7 +25,7 @@ class Gato extends Animal{
 
 class Siames extends Gato{
     constructor(nome, cor="Cinza"){
-        super(nome)
+        super(nome);
         this.cor = cor;
     }
 
