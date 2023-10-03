@@ -33,12 +33,10 @@ if(elemento instanceof Celular){
     container.innerHTML +=
     `
     <div>
-    <p class='label'> Armazenamento:</p>
-    <p class='valor's>  ${elemento.armazenamento}  </p>
+    <p class='label'> Armazenamento:  ${elemento.armazenamento}  </p>
 </div>
 <div>
-<p class='label'> Ram:</p>
-<p class='valor's>  ${elemento.ram}  </p>
+<p class='label'> Ram: ${elemento.ram}  </p>
 </div>
     `
 }
