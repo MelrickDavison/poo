@@ -24,6 +24,7 @@ class Gato extends Animal{
 }
 
 class Siames extends Gato{
+    //Sobrecarga
     constructor(nome, cor="Cinza"){
         super(nome);
         this.cor = cor;
