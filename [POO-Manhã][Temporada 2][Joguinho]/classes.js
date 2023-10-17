@@ -6,12 +6,22 @@ class Personagem{
     }
 
     atacar(oponente){
-        console.log(`${oponente.nome} foi atacado por ${this.nome}`)
-        oponente.sofrerDano(this.ataque)
+        if(oponente instanceof Personagem){
+        oponente.sofrerDano(this) //Passando o próprio objeto
+        }else{
+            console.error("Você não pode atacar isso");
+        }
     }
 
-    sofrerDano(dano){
-        this.vida -= dano
-        console.log(`Vida de ${this.nome}: ${this.vida}`)
+    //Será utilizado no outro objeto
+    sofrerDano(oponente){
+        if(oponente instanceof Personagem){
+            this.vida -= oponente.ataque
+            console.log(`Vida de ${this.nome}:s ${this.vida}`)
+            console.log(`${oponente.nome} foi atacado por ${this.nome}`)
+            }else{
+                console.error("Você não pode atacar isso");
+            }
+
     }
 }
