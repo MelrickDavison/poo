@@ -17,8 +17,8 @@ class Personagem{
     sofrerDano(oponente){
         if(oponente instanceof Personagem){
             this.vida -= oponente.ataque
-            console.log(`Vida de ${this.nome}:s ${this.vida}`)
-            console.log(`${oponente.nome} foi atacado por ${this.nome}`)
+            console.log(`${this.nome} foi atacado por ${oponente.nome}`)
+            console.log(`Vida de ${this.nome}: ${this.vida}`)
             }else{
                 console.error("Você não pode atacar isso");
             }
