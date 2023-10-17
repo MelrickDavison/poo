@@ -1,17 +1,17 @@
 class Personagem{
-    constructor(nome, ataque, vida){
+    constructor(nome, ataque){
         this.nome = nome;
         this.ataque = ataque;
-        this.vida = vida;
+        this.vida = 100;
     }
 
     atacar(oponente){
-        console.log(`${this.nome} atacou ${oponente.nome}`)
+        console.log(`${oponente.nome} foi atacado por ${this.nome}`)
         oponente.sofrerDano(this.ataque)
     }
 
     sofrerDano(dano){
         this.vida -= dano
-        console.log(`Sua vida agora é ${this.vida}`)
+        console.log(`Vida de ${this.nome}: ${this.vida}`)
     }
 }
