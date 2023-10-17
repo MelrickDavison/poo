@@ -6,8 +6,8 @@ class Personagem{
     }
 
     atacar(oponente){
-        oponente.sofrerDano(this.ataque)
         console.log(`${this.nome} atacou ${oponente.nome}`)
+        oponente.sofrerDano(this.ataque)
     }
 
     sofrerDano(dano){
