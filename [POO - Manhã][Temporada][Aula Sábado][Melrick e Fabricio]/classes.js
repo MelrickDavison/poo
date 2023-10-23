@@ -1,5 +1,5 @@
 class Player {
-    constructor(nome, qtdLados, raio, cor, velocidadeMaxDoTiro, ataque, bala) {
+    constructor(nome, qtdLados, raio, cor, velocidadeMaxDoTiro, ataque) {
         this.nome = nome;
         this.qtdLados = qtdLados;
         this.raio = raio;
@@ -7,7 +7,7 @@ class Player {
         this.velocidadeMaxDoTiro = velocidadeMaxDoTiro;
         this.vida = 100;
         this.ataque = ataque;
-        this.bala = bala;
+        this.bala = new Bala(ataque, cor);
     }
 }
 
@@ -18,3 +18,17 @@ class Bala {
     }
 }
 
+class GerenciadorDeDuelo{
+    constructor(player1, player2){
+        this.player1 = player1;
+        this.player2 = player2;
+    }
+
+    getLadoPlayer1(){
+        return "esquerda"
+    }
+
+    getLadoPlayer2(){
+        return "direita"
+    }
+}
