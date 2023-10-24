@@ -147,7 +147,18 @@ Matter.World.add(engine.world, [
     parede(280, 800, 2000, 20), // bottom
     parede(0, 400, 20, 1024),   // left
     parede(1024, 400, 20, 1024), // right
+    paredeColorida(450, 640, 20, 590, '#ccbb22'),
+    paredeColorida(700, 50, 20, 250, 'blue')
 ]);
+
+function paredeColorida(x, y, width, height, cor) {
+    return Matter.Bodies.rectangle(x, y, width, height, {
+        isStatic: true,
+        render: {
+            fillStyle: cor
+        }
+    });
+}
 
 // Criação dos players
 let player1 = new Player('Alex', 6, 70, '#888888', 17, 15);
