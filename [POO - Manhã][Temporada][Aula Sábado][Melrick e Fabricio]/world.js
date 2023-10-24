@@ -76,14 +76,14 @@ function atirar(player, lado) {
 
 function receberTiro(event) {
     event.pairs
-        .filter((pair) => pair.bodyA.label === player1.nome)
+        .filter((pair) => pair.bodyA.label === juiz.player1.nome)
         .forEach((pair) => {
             if (pair.bodyB.label === 'balaDireita') {
-                if (player1.vida - player2.ataque > 0) {
-                    player1.vida -= player2.ataque;
-                    console.log(`Player 1: ${player1.vida}`);
+                if (juiz.player1.vida - juiz.player2.ataque > 0) {
+                    juiz.player1.vida -= juiz.player2.ataque;
+                    console.log(`Player 1: ${juiz.player1.vida}`);
                 } else {
-                    player1.vida = 0;
+                    juiz.player1.vida = 0;
                     pair.bodyA.render.fillStyle = '#dedede';
                     console.log(`Player 1: PERDEU`);
                 }
@@ -91,15 +91,15 @@ function receberTiro(event) {
             Matter.World.remove(engine.world, pair.bodyB);
         });
     event.pairs
-        .filter((pair) => pair.bodyA.label === player2.nome)
+        .filter((pair) => pair.bodyA.label === juiz.player2.nome)
         .forEach((pair) => {
             if (pair.bodyB.label === 'balaEsquerda') {
                 // 
-                if (player2.vida - player1.ataque > 0) {
-                    player2.vida -= player1.ataque;
-                    console.log(`Player 2: ${player2.vida}`);
+                if (juiz.player2.vida - juiz.player1.ataque > 0) {
+                    juiz.player2.vida -= juiz.player1.ataque;
+                    console.log(`Player 2: ${juiz.player2.vida}`);
                 } else {
-                    player2.vida = 0;
+                    juiz.player2.vida = 0;
                     pair.bodyA.render.fillStyle = '#dedede';
                     console.log(`Player 2: PERDEU!`);
                 }
@@ -138,8 +138,20 @@ let runner = Matter.Runner.create();
 Matter.Runner.run(runner, engine);
 // ====================================================
 
+function trianguloCadente() {
+    console.log('triangulo');
+    let triangulo = Matter.Bodies.polygon(rand(300, 700), 30, 2, 10, {
+        isStatic: false,
+        restitution: 0.8,
+        render: {
+            fillStyle: '#0000aa'
+        }
+    });
+    Matter.World.add(engine.world, triangulo)
+}
 
-
+Matter.Events.on(engine, 'click', trianguloCadente);
+setInterval(trianguloCadente, 800);
 
 // Construção das 4 paredes:
 Matter.World.add(engine.world, [
@@ -163,7 +175,9 @@ function paredeColorida(x, y, width, height, cor) {
 // Criação dos players
 let player1 = new Player('Alex', 6, 70, '#888888', 17, 15);
 let player2 = new Player('Sandro', 5, 40, '#333333', 10, 12);
-let juiz = new GerenciadorDeDuelo(player1, player2)
+let player3 = new Player("Mel", 6, 70, '#98054585', 17, 15);
+let player4 = new Player("Rick", 5, 40, '#90028922', 10, 12)
+let juiz = new GerenciadorDeDuelo(player3, player4)
 
 // Posicionamento dos players na tela
 Matter.World.add(engine.world, dueloVisual(juiz));
@@ -174,10 +188,13 @@ Matter.Events.on(engine, 'collisionStart', receberTiro);
 
 // Eventos de Teclas
 document.addEventListener('keydown', function (e) {
-    if (player1.vida > 0 && player2.vida > 0)
-        if (e.key === 'd') { // left arrow key
-            atirar(player1, 'esquerda');
-        } else if (e.key === 'ArrowLeft') { // right arrow key
-            atirar(player2, 'direita');
-        }
+    if (e.key === 'f') {
+        trianguloCadente();
+    }
+    //   if (juiz.player1.vida > 0 && juiz.player2.vida > 0)
+    if (e.key === 'd') { // left arrow key
+        atirar(juiz.player1, 'esquerda');
+    } else if (e.key === 'ArrowLeft') { // right arrow key
+        atirar(juiz.player2, 'direita');
+    };
 });
